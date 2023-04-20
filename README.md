@@ -4,13 +4,32 @@
 
 ### Linux Kernel 6.2.x
 
-Kernel 6.2.x requires the following patches:
+Kernel 6.2.x requires the following patches.
+
+- fixing screen flickering white and/or fully white (https://gitlab.freedesktop.org/drm/amd/-/issues/2352, https://gitlab.freedesktop.org/drm/amd/-/issues/2352#note_1776812)
+
+```
+diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
+index 037af1997b27a83d16d88dccd3d8c658d557e9a8..c40cbfb758b53d849b1fbd173d487301f8b22063 100644
+--- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
++++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
+@@ -1553,8 +1553,6 @@ static int amdgpu_dm_init(struct amdgpu_device *adev)
+ 				init_data.flags.gpu_vm_support = true;
+ 			break;
+ 		case IP_VERSION(3, 0, 1):
+-		case IP_VERSION(3, 1, 2):
+-		case IP_VERSION(3, 1, 3):
+ 		case IP_VERSION(3, 1, 6):
+ 			init_data.flags.gpu_vm_support = true;
+ 			break;
+```
+
 
 
 
 ### Linux Kernel 6.3.x
 
-
+I'm not certain that the patch above was included in 6.3, it's likely that this is still a pending issue.
 
 ## Battery Savings
 
