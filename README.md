@@ -5,8 +5,6 @@ Linux related tweaks and settings to ensure the best possible experience when ru
 - Fedora
 - Voidlinux (coming soon)
 
-On Lenovo Legion laptops
-
 # If you have any 2022 AMD model please help me collect all relevant tweaks and settings
 
 ## Currently Available
