@@ -5,6 +5,8 @@ Linux related tweaks and settings to ensure the best possible experience when ru
 - Fedora
 - Voidlinux (coming soon)
 
+# If you have a 2022 AMD model please help me collect all relevant tweaks and settings
+
 ## Software
 
 - https://github.com/johnfanv2/LenovoLegionLinux (Lenovo Legion Linux (LLL) brings additional drivers and tools for Lenovo Legion series laptops to Linux. It is the alternative to Lenovo Vantage or Legion Zone (both Windows only). It allows to control a few features like fan curve and power mode.)
